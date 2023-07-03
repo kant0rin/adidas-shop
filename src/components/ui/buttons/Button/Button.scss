@@ -1,0 +1,26 @@
+.button {
+
+  transition: all .3s;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    left: 3px;
+    bottom: -3px;
+    content: '';
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.button.contained{
+  &::before {
+    border: 1px solid black;
+  }
+}
+
+.button.outlined{
+  &::before {
+    border: 1px solid white;
+  }
+}

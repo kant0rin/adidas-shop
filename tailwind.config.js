@@ -14,7 +14,9 @@ module.exports = {
       },
       colors: {
         "text-hover": "#767677",
-        "text-hover-alternative": "#767677"
+        "text-hover-alternative": "#767677",
+        "text-sale-price": "#e32b2b",
+        "text-disabled": "#767677"
       }
     },
   },

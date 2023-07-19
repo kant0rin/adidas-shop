@@ -1,0 +1,16 @@
+.header__link{
+  position: relative;
+  padding-bottom: 8px;
+  &:hover {
+    &::after {
+      width: 100%;
+      background: black;
+      height: 2px;
+      content: '';
+      border-radius: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

@@ -4,19 +4,27 @@ import {FaArrowRightLong} from "react-icons/fa6";
 import classNames from "classnames";
 
 type ButtonVariant = 'contained' | 'outlined'
-interface OwnProps {
-  children: string | React.ReactNode,
+export interface ButtonProps extends ReactTagProps<'button'>{
+  children: React.ReactNode,
   variant: ButtonVariant,
-  icon?: React.ReactNode
+  icon?: React.ReactNode,
+  width?: number | string
 }
 
-type Props = OwnProps;
+export const BUTTON_TEST_IDS = {
+  CONTAINER: 'button-container',
+  CHILDREN: 'button-children'
+}
 
-const Button: FunctionComponent<Props> = ({children, icon, variant}) => {
+
+const Button: FunctionComponent<ButtonProps> = ({children, icon, variant, width}) => {
 
   return (
-    <div className='relative z-10'>
-      <button className={classNames('button w-full px-4 flex justify-between items-center min-h-[50px] uppercase font-bold',
+    <div
+      className={classNames('relative z-10')}
+      style={{width: width}}
+    >
+      <button data-testid={BUTTON_TEST_IDS.CONTAINER} className={classNames(`button w-full px-4 flex justify-between items-center min-h-[50px] uppercase font-bold`,
         {
           'bg-black text-white hover:text-text-hover contained': variant === 'contained'
         },
@@ -26,8 +34,8 @@ const Button: FunctionComponent<Props> = ({children, icon, variant}) => {
       )
 
       }>
-        {children}
-        <FaArrowRightLong className='ml-4'/>
+        <span className='mr-4' data-testid={BUTTON_TEST_IDS.CHILDREN}>{children}</span>
+        <FaArrowRightLong/>
       </button>
 
     </div>

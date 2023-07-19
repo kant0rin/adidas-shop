@@ -1,4 +1,6 @@
 import './globals.css'
+import PreHeader from "@/components/layout/PreHeader/PreHeader";
+import Header from "@/components/layout/Header/Header";
 
 
 export const metadata = {
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <PreHeader/>
+      <Header/>
+      {children}
+      </body>
     </html>
   )
 }

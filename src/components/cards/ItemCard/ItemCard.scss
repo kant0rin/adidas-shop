@@ -1,0 +1,11 @@
+.item-card{
+  &:hover {
+    .item-card__price {
+      bottom: 5px;
+    }
+  }
+}
+
+.item-card__price {
+  transition: .2s;
+}

@@ -54,9 +54,9 @@ const ItemCard: FunctionComponent<Props> = ({
   type
 }) => {
   return (
-    <div className={classNames( 'item-card flex flex-col cursor-pointer border-white border hover:border-black',
+    <div className={classNames( 'min-w-[165px] item-card flex flex-col cursor-pointer border-white border hover:border-black',
       {'2xl:w-[378px] xl:w-[340px] lg:w-[300px] w-[300px]': type==='big'},
-      {'2xl:w-[280px] lg:w-[220px] sm:-[165px] text-[12px]': type==='small'}
+      {'2xl:w-[280px] lg:w-[220px] sm:w-[165px] text-[12px]': type==='small'}
     )}>
       <div className='w-full relative'>
         <img src={image} alt='image' className='block w-full' />

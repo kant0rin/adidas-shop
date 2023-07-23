@@ -27,7 +27,7 @@ const Banner: FunctionComponent<Props> = (props) => {
         alt='banner'
       />
       <div
-        className="2xl:px-10 px-6 lg:justify-center justify-end absolute left-0 top-0 py-4 lg:w-full sm:w-[380px] w-full h-full text-white flex flex-col"
+        className="2xl:px-52 px-6 lg:justify-center justify-end absolute left-0 top-0 py-4 lg:w-full sm:w-[380px] w-full h-full text-white flex flex-col"
       >
         <h1 className='sm:text-[40px] text-[30px] font-bold mb-5'>SET THE SCENE</h1>
         <p className='text-[16px] font-bold leading-[24px] mb-4'>Everybody has a story. Tell yours with the Superstar XLG.</p>

@@ -1,1 +1,5 @@
 export * from './Banner/Banner'
+export * from './CarouselShoes/CarouselShoes'
+export * from './SaleBanner/SaleBanner'
+export * from './ShoesCategories/ShoesCategories'
+export * from './CarouselCategories/CarouselCategories'
